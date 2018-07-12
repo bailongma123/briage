@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.ande</groupId>
+    <artifactId>bridge-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>bridge-kafka</artifactId>
+  <properties>
+  	<pool.version>0.0.1-SNAPSHOT</pool.version>  
+  	<kafka.version>0.9.0.1</kafka.version>
+  </properties>
+  <dependencies>
+  	 <!-- Kafka -->
+         <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka_2.11</artifactId>
+            <version>${kafka.version}</version>
+           <exclusions>  
+                 <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-log4j12</artifactId>
+                </exclusion>  
+                </exclusions>
+        </dependency> 
+        <!-- Kafka -->
+         <dependency>
+            <groupId>com.ande</groupId>
+           <artifactId>bridge-pool</artifactId>
+            <version>${pool.version}</version>
+        </dependency> 
+       <!--  <dependency>
+			<groupId>org.darkphoenixs</groupId>
+			<artifactId>messagequeue-framework</artifactId>
+			<version>1.5.2</version>
+		</dependency> -->
+  </dependencies>
+</project>

@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.ande</groupId>
+    <artifactId>bridge-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <artifactId>bridge-web</artifactId>
+  <packaging>war</packaging>
+  <properties>
+   <spring-kafka.version>1.0.6.RELEASE</spring-kafka.version>
+  </properties>
+  <dependencies>
+    <!--jsp支持-->
+    <!-- servlet 依赖. -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+    </dependency>
+    <!-- tomcat 的支持.-->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-tomcat</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.tomcat.embed</groupId>
+      <artifactId>tomcat-embed-jasper</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    
+	  <dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-websocket</artifactId>
+	</dependency>
+	  <dependency>
+	  	<groupId>com.ande</groupId>
+	    <artifactId>bridge-common</artifactId>
+	    <version>0.0.1-SNAPSHOT</version>
+	  </dependency>
+	  <dependency>
+	  	<groupId>com.ande</groupId>
+	    <artifactId>bridge-model</artifactId>
+	    <version>0.0.1-SNAPSHOT</version>
+	  </dependency>
+	   <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.ande</groupId>
+            <artifactId>bridge-kafka</artifactId>
+             <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+  </dependencies>
+</project>
